@@ -19,6 +19,7 @@ function Weather() {
                         data: body[body.sol_keys[i]]
                     });
                 }
+                console.log(newReport);
             } catch (e) {
                 console.log("Error: " + e);
             }
@@ -30,7 +31,7 @@ function Weather() {
     const weatherCards = report.map((w) => <WeatherCard key={w.day} weather={w}/>);
     return (
         <div className="container">
-            <h1>Weather Reports</h1>
+            <h1 className="text-center">Weather Reports</h1>
             <div className="row row-cols-1 row-cols-md-5">
                 {
                     weatherCards
