@@ -14,7 +14,7 @@ function Weather() {
                 let body = await res.json();
                 
                 for (let i = 0; i < body.sol_keys.length; i++) {
-                    newReport.push( {
+                    newReport.push({
                         day: body.sol_keys[i],
                         data: body[body.sol_keys[i]]
                     });

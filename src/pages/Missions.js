@@ -10,6 +10,7 @@ function Missions() {
         "opportunity",
         "spirit",
     ]
+    
     useEffect(() => {
         async function getMissions() {
             let newMission = []
