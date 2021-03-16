@@ -4,13 +4,13 @@ import React, { useState, useEffect } from 'react';
 import MissionCard from '../components/MissionCard'
 
 function Missions() {
-    const [ missions, setMissions ] = useState([]);
+    const [missions, setMissions] = useState([]);
     const missions_list = [
         "curiosity",
         "opportunity",
         "spirit",
     ]
-    
+
     useEffect(() => {
         async function getMissions() {
             let newMission = []
@@ -26,7 +26,7 @@ function Missions() {
             }
             setMissions(newMission)
         }
-        if (missions.length === 0){
+        if (missions.length === 0) {
             getMissions();
         }
     }, [])
@@ -36,7 +36,7 @@ function Missions() {
         <div className="container">
             <h1 className="text-center">Mission Manifests</h1>
             <div className="row row-cols-1 row-cols-md-8">
-                { missionCards }
+                {missionCards}
             </div>
         </div>
     );
