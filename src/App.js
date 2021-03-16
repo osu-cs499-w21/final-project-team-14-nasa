@@ -1,6 +1,7 @@
 import {BrowserRouter, Route, Switch} from 'react-router-dom';
 import Home from './Home';
 import Missions from './pages/Missions'
+import Weather from './Weather';
 
 function App() {
     return (
@@ -11,6 +12,9 @@ function App() {
                 </Route>
                 <Route exact path="/missions">
                     <Missions />
+                </Route>
+                <Route exact path="/weather">
+                    <Weather />
                 </Route>
             </Switch>
         </BrowserRouter>
