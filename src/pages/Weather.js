@@ -1,7 +1,7 @@
 import fetch from 'isomorphic-unfetch';
 import React, { useState, useEffect } from 'react';
 
-import WeatherCard from './WeatherCard';
+import WeatherCard from '../components/WeatherCard';
 
 function Weather() {
     const [report, setReport] = useState([]);
