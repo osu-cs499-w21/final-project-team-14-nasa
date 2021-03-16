@@ -1,6 +1,6 @@
 import {BrowserRouter, Route, Switch} from 'react-router-dom';
 import Home from './Home';
-import Missions from './pages/Missions';
+import Missions from './pages/Missions'
 import Weather from './pages/Weather';
 
 function App() {
