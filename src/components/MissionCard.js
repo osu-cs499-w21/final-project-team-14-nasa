@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom'
 
 function MissionCard(props) {
     return (
@@ -24,6 +25,7 @@ function MissionCard(props) {
                         <li className="list-group list-group-flush">
                             <strong className="card-text">Photos</strong>
                             {/* TODO: add link to photos */}
+                            {/* <Link to={``}>Photos</Link> */}
                             <p className="card-text">Total Photo Count: {props.mission.total_photos}</p>
                         </li>
                     }
