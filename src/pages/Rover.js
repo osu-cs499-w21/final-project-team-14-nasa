@@ -60,7 +60,7 @@ function Rover() {
     return (
         <div className="container">
             <h1 className="text-center">{roverName.toUpperCase()}</h1>
-            <div className="row row-cols-1 row-cols-md-8">
+            <div className="row row-cols-1 row-cols-md-5">
                 {photoCards}
             </div>
         </div>
