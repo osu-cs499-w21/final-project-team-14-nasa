@@ -5,11 +5,11 @@ import CarouselCard from '../components/CarouselCard';
 
 function Home() {
     const [rover, setImgRover] = useState([]);
-    const rover_list = [
-        "curiosity",
-        "opportunity",
-        "spirit",
-    ]
+    // const rover_list = [
+    //     "curiosity",
+    //     "opportunity",
+    //     "spirit",
+    // ]
 
     useEffect(() => {
         async function getImgRover() {

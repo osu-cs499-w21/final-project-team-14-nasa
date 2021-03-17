@@ -22,7 +22,6 @@ function Rover() {
                 body = await res.json()
                 
                 for(let i = 0; i < body.photos.length; i++){
-                    console.log(body.photos[i])
                     newRover.push({
                         id: body.photos[i].id,
                         src: body.photos[i].img_src,

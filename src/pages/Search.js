@@ -46,7 +46,7 @@ function Search(props) {
                     <form action={`/search/${roverState}/${dateState}`}>
                         <div className="form-group">
                             <label for="roverSelector">Rover</label>
-                            <select class="form-control" id="roverSelector"
+                            <select className="form-control" id="roverSelector"
                                 value={roverState} 
                                 onChange={(e) => setRoverState(e.target.value)}>
                                 <option>Curiosity</option>
@@ -56,7 +56,7 @@ function Search(props) {
                         </div>
                         <div className="form-group">
                             <label for="dateSelector">Date taken</label>
-                            <input type="date" class="form-control" id="dateSelector" 
+                            <input type="date" className="form-control" id="dateSelector" 
                                 value={dateState} onChange={(e) => setDateState(e.target.value)} required></input>
                         </div>
                         <button type="submit" className="btn btn-primary">Search</button>

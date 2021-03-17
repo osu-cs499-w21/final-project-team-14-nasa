@@ -1,6 +1,5 @@
 import React from 'react';
-import { 
-    BrowserRouter,
+import {
     Route,
     Switch,
     NavLink } from 'react-router-dom';
@@ -17,26 +16,26 @@ import Search from '../pages/Search';
 function Navbar() {
     return (
       <>
-        <ul class="nav nav-tabs justify-content-end">
-        <li class="nav-item">
-            <li class="nav-link"><NavLink to="/">Home </NavLink></li>
+        <ul className="nav nav-tabs justify-content-end">
+        <li className="nav-item">
+            <li className="nav-link"><NavLink to="/">Home </NavLink></li>
         </li>
-        <li class="nav-item">
-            <li class="nav-link"><NavLink to="/missions">Missions </NavLink></li>
+        <li className="nav-item">
+            <li className="nav-link"><NavLink to="/missions">Missions </NavLink></li>
         </li>
-        <li class="nav-item">
-            <li class="nav-link"><NavLink to="/weather">Weather </NavLink></li>
+        <li className="nav-item">
+            <li className="nav-link"><NavLink to="/weather">Weather </NavLink></li>
         </li>
-        <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Rovers</a>
-            <div class="dropdown-menu">
-                <li class="dropdown-item"><NavLink to ="/rover/curiosity">Curiosity</NavLink></li>
-                <li class="dropdown-item"><NavLink to ="/rover/opportunity">Opportunity</NavLink></li>
-                <li class="dropdown-item"><NavLink to ="/rover/spirit">Spirit</NavLink></li>
+        <li className="nav-item dropdown">
+            <a className="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Rovers</a>
+            <div className="dropdown-menu">
+                <li className="dropdown-item"><NavLink to ="/rover/curiosity">Curiosity</NavLink></li>
+                <li className="dropdown-item"><NavLink to ="/rover/opportunity">Opportunity</NavLink></li>
+                <li className="dropdown-item"><NavLink to ="/rover/spirit">Spirit</NavLink></li>
             </div>
         </li>
-        <li class="nav-item">
-            <li class="nav-link"><NavLink to="/search">Search </NavLink></li>
+        <li className="nav-item">
+            <li className="nav-link"><NavLink to="/search">Search </NavLink></li>
         </li>
         </ul>
             <Switch>
