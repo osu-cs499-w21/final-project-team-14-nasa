@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 function PhotoCard(props) {
     return (
-        <div className="col md-6">
+        <div className="col md-6 p-3">
             <div className="card text-center">
                 <div className="card-header">
                     {props.image.rover_name} - {props.image.camera}
