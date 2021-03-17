@@ -2,7 +2,8 @@ import React from 'react';
 import {
     Route,
     Switch,
-    NavLink } from 'react-router-dom';
+    NavLink,
+    Redirect } from 'react-router-dom';
 
 
 import Home from '../pages/Home';
@@ -39,6 +40,9 @@ function Navbar() {
         </li>
         </ul>
             <Switch>
+                <Route path="/home">
+                    <Redirect to="/" />
+                </Route>
                 <Route exact path="/">
                     <Home />
                 </Route>
@@ -56,6 +60,9 @@ function Navbar() {
                 </Route>
                 <Route exact path="/search">
                     <Search />
+                </Route>
+                <Route path="/">
+                    <h1>404 Page not found</h1>
                 </Route>
             </Switch>
       </>
