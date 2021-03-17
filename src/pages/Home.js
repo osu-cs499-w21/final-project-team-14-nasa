@@ -15,28 +15,31 @@ function Home() {
         async function getImgRover() {
             let newRover = []
             try {
-                for (let i = 0; i < rover_list.length; i++) {
-                    let res = await fetch(`https://api.nasa.gov/mars-photos/api/v1/manifests/${rover_list[i]}?api_key=${process.env.REACT_APP_NASA}`);
-                    let body = await res.json();
-                    console.log("BODY  1: " + body.photo_manifest.name);
+                let res = await fetch(`https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?earth_date=2012-08-06&api_key=${process.env.REACT_APP_NASA}`);
+                let body = await res.json();
+                for(let i = 0; i < 3; i++){
+                    newRover.push({
+                        id: body.photos[i].id,
+                        src: body.photos[i].img_src
+                    });
+                }
 
-                    let rover_date = body.photo_manifest.landing_date;
-                    console.log("date: " + rover_date);
+                res = await fetch(`https://api.nasa.gov/mars-photos/api/v1/rovers/opportunity/photos?earth_date=2004-01-26&api_key=${process.env.REACT_APP_NASA}`);
+                body = await res.json();
+                for(let i = 0; i < 3; i++){
+                    newRover.push({
+                        id: body.photos[i].id,
+                        src: body.photos[i].img_src
+                    });
+                }
 
-                    res = await fetch(`https://api.nasa.gov/mars-photos/api/v1/rovers/${rover_list[i]}/photos?earth_date=${rover_date}&api_key=${process.env.REACT_APP_NASA}`);
-                    body = await res.json();
-
-                    console.log("pHOTO BODY: " + body.photos);
-                    if(body.photos.length !== 0) {
-                        for(let i = 0; i < 3; i++){
-                            newRover.push({
-                                id: body.photos[i].id,
-                                src: body.photos[i].img_src
-                            });
-                        }
-                    } else {
-                        continue;
-                    }
+                res = await fetch(`https://api.nasa.gov/mars-photos/api/v1/rovers/spirit/photos?earth_date=2004-01-05&api_key=${process.env.REACT_APP_NASA}`);
+                body = await res.json();
+                for(let i = 0; i < 3; i++){
+                    newRover.push({
+                        id: body.photos[i].id,
+                        src: body.photos[i].img_src
+                    });
                 }
             }
             catch (e) {
