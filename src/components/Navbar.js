@@ -19,7 +19,7 @@ function Navbar() {
       <>
         <ul class="nav nav-tabs justify-content-end">
         <li class="nav-item">
-            <li class="nav-link"><NavLink to="/home">Home </NavLink></li>
+            <li class="nav-link"><NavLink to="/">Home </NavLink></li>
         </li>
         <li class="nav-item">
             <li class="nav-link"><NavLink to="/missions">Missions </NavLink></li>
@@ -40,7 +40,7 @@ function Navbar() {
         </li>
         </ul>
             <Switch>
-                <Route exact path="/home">
+                <Route exact path="/">
                     <Home />
                 </Route>
                 <Route exact path="/missions">
