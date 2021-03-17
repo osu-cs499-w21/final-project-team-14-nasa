@@ -30,9 +30,9 @@ function Navbar() {
         <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Rovers</a>
             <div class="dropdown-menu">
-                <li class="dropdown-item"><NavLink to ="/rovercuriosity">Curiosity</NavLink></li>
-                <li class="dropdown-item"><NavLink to ="/roveropportunity">Opportunity</NavLink></li>
-                <li class="dropdown-item"><NavLink to ="/roverspirit">Spirit</NavLink></li>
+                <li class="dropdown-item"><NavLink to ="/rover/curiosity">Curiosity</NavLink></li>
+                <li class="dropdown-item"><NavLink to ="/rover/opportunity">Opportunity</NavLink></li>
+                <li class="dropdown-item"><NavLink to ="/rover/spirit">Spirit</NavLink></li>
             </div>
         </li>
         <li class="nav-item">
@@ -49,7 +49,7 @@ function Navbar() {
                 <Route exact path="/weather">
                     <Weather />
                 </Route>
-                <Route path="/rover:roverName">
+                <Route path="/rover/:roverName">
                     <Rover />
                 </Route>
                 <Route exact path="/search/:rover/:date">

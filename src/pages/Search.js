@@ -5,7 +5,7 @@ import PhotoCard from '../components/PhotoCard';
 
 function Search(props) {
     const {rover, date} = useParams();
-    const [roverState, setRoverState] = useState("Spirit");
+    const [roverState, setRoverState] = useState("Curiosity");
     const [dateState, setDateState] = useState("");
     const [photosRes, setPhotosRes] = useState([]);
 
@@ -22,7 +22,7 @@ function Search(props) {
                         id: body.photos[i].id,
                         src: body.photos[i].img_src,
                         camera: body.photos[i].camera.full_name,
-                        date: body.photos[i].earth_date,
+                        earth_date: body.photos[i].earth_date,
                         rover_name: body.photos[i].rover.name
                     })
                 }
@@ -62,7 +62,7 @@ function Search(props) {
                         <button type="submit" className="btn btn-primary">Search</button>
                     </form>
                 ) : (
-                    photosRes.length == 0 ? (
+                    photosRes.length === 0 ? (
                         <div className="row justify-content-center">
 
                             <div className="alert alert-danger col-5" role="alert">

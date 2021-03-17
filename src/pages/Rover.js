@@ -4,26 +4,12 @@ import React, { useState, useEffect } from 'react';
 import PhotoCard from '../components/PhotoCard'
 
 import {
-    Route,
-    Switch,
-    Link,
-    NavLink,
-    Redirect,
-    useParams,
-    useRouteMatch
+    useParams
 } from 'react-router-dom';
 
 function Rover() {
     const { roverName } = useParams();
-    const match = useRouteMatch();
-    const { url, path } = match;
-
     const [rover, setRover] = useState([]);
-    const rover_list = [
-        "curiosity",
-        "opportunity",
-        "spirit",
-    ]
 
     useEffect(() => {
         async function getRover() {
@@ -51,10 +37,8 @@ function Rover() {
             }
             setRover(newRover)
         }
-        if (rover.length === 0) {
-            getRover();
-        }
-    }, [])
+        getRover();
+    }, [roverName])
 
     const photoCards = rover.map((m) => <PhotoCard key={m.id} image={m}></PhotoCard>)
     return (

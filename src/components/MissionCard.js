@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 function MissionCard(props) {
     return (
-        <div className="col lg-8">
+        <div className="col lg-8 mb-3">
             <div className="card text-center">
                 <div className="card-header">
                     {props.mission.name}
