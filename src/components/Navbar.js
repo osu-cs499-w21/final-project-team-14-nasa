@@ -17,12 +17,27 @@ import Search from '../pages/Search';
 function Navbar() {
     return (
       <>
-        <ul>
-            <li><NavLink to="/home">Home</NavLink></li>
-            <li><NavLink to="/missions">Missions</NavLink></li>
-            <li><NavLink to="/weather">Weather</NavLink></li>
-            <li><NavLink to="/rover">Rover</NavLink></li>
-            <li><NavLink to="/search">Search</NavLink></li>
+        <ul class="nav nav-tabs justify-content-end">
+        <li class="nav-item">
+            <li class="nav-link"><NavLink to="/home">Home </NavLink></li>
+        </li>
+        <li class="nav-item">
+            <li class="nav-link"><NavLink to="/missions">Missions </NavLink></li>
+        </li>
+        <li class="nav-item">
+            <li class="nav-link"><NavLink to="/weather">Weather </NavLink></li>
+        </li>
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Rovers</a>
+            <div class="dropdown-menu">
+                <li class="dropdown-item"><NavLink to ="/rovercuriosity">Curiosity</NavLink></li>
+                <li class="dropdown-item"><NavLink to ="/roveropportunity">Opportunity</NavLink></li>
+                <li class="dropdown-item"><NavLink to ="/roverspirit">Spirit</NavLink></li>
+            </div>
+        </li>
+        <li class="nav-item">
+            <li class="nav-link"><NavLink to="/search">Search </NavLink></li>
+        </li>
         </ul>
             <Switch>
                 <Route exact path="/home">
