@@ -31,7 +31,7 @@ function Rover() {
             try {
                 let res = await fetch(`https://api.nasa.gov/mars-photos/api/v1/manifests/${roverName}?api_key=${process.env.REACT_APP_NASA}`)
                 let body = await res.json()
-                let rover_date = body.photo_manifest.landing_date
+                let rover_date = body.photo_manifest.max_date
                 res = await fetch(`https://api.nasa.gov/mars-photos/api/v1/rovers/${roverName}/photos?earth_date=${rover_date}&api_key=${process.env.REACT_APP_NASA}`)
                 body = await res.json()
                 
