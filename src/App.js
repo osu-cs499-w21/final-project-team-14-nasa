@@ -19,7 +19,7 @@ function App() {
                 <Route exact path="/weather">
                     <Weather />
                 </Route>
-                <Route path="/rover:roverName">
+                <Route path="/rover/:roverName">
                     <Rover />
                 </Route>
                 <Route exact path="/search/:rover/:date">
