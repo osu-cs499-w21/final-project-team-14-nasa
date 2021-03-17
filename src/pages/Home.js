@@ -16,12 +16,12 @@ function Home() {
             let newRover = []
             try {
                 for (let i = 0; i < rover_list.length; i++) {
-                    let res = await fetch(`https://api.nasa.gov/mars-photos/api/v1/manifests/${rover_list[i]}?api_key=gzXYpeLfDsPCnxjtl2ic2LG4n3BmZ78u5Pnageqe`);
+                    let res = await fetch(`https://api.nasa.gov/mars-photos/api/v1/manifests/${rover_list[i]}?api_key=${process.env.REACT_APP_NASA}`);
                     let body = await res.json();
 
                     let rover_date = body.photo_manifest.landing_date;
 
-                    res = await fetch(`https://api.nasa.gov/mars-photos/api/v1/rovers/${rover_list[i]}/photos?earth_date=${rover_date}&api_key=gzXYpeLfDsPCnxjtl2ic2LG4n3BmZ78u5Pnageqe`);
+                    res = await fetch(`https://api.nasa.gov/mars-photos/api/v1/rovers/${rover_list[i]}/{photos?earth_date=${rover_date}&api_key=${process.env.REACT_APP_NASA}`);
                     body = await res.json()
                     
                     for(let i = 0; i < 10; i++){
