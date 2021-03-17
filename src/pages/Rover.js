@@ -41,7 +41,7 @@ function Rover() {
                         id: body.photos[i].id,
                         src: body.photos[i].img_src,
                         camera: body.photos[i].camera.full_name,
-                        date: body.photos[i].earth_date,
+                        earth_date: body.photos[i].earth_date,
                         rover_name: roverName
                     })
                 }

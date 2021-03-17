@@ -10,8 +10,7 @@ function PhotoCard(props) {
                 </div>
                 <img alt_text="hello world" src={props.image.src}></img>
                 <div className="row">
-                    <p className="col sm-4">Earth Date {props.image.date}</p>
-                    <p className="col sm-4">Sol Date {props.image.date}</p>
+                    <p className="col sm-4">Earth Date {props.image.earth_date}</p>
                 </div>
             </div>
         </div>
